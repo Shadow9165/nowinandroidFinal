@@ -138,6 +138,7 @@ fun NewsResourceCardExpanded(
                             userNewsResource.title,
                             modifier = Modifier
                                 .fillMaxWidth((.8f))
+                                .testTag("newsTitle")
                                 .dragAndDropSource { _ ->
                                     DragAndDropTransferData(
                                         ClipData.newPlainText(
@@ -200,6 +201,7 @@ fun NewsResourceHeaderImage(
             CircularProgressIndicator(
                 modifier = Modifier
                     .align(Alignment.Center)
+                    .testTag("newsImage")
                     .size(80.dp),
                 color = MaterialTheme.colorScheme.tertiary,
             )

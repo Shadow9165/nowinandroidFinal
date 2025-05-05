@@ -454,6 +454,7 @@ private fun SearchToolbar(
         IconButton(onClick = { onBackClick() }) {
             Icon(
                 imageVector = NiaIcons.ArrowBack,
+                modifier = Modifier.testTag("backButtonSearchToolBar"),
                 contentDescription = stringResource(
                     id = string.core_ui_back,
                 ),
@@ -485,7 +486,7 @@ private fun SearchTextField(
         colors = TextFieldDefaults.colors(
             focusedIndicatorColor = Color.Transparent,
             unfocusedIndicatorColor = Color.Transparent,
-            disabledIndicatorColor = Color.Transparent,
+            disabledIndicatorColor = Color.Transparent
         ),
         leadingIcon = {
             Icon(
@@ -502,6 +503,7 @@ private fun SearchTextField(
                     onClick = {
                         onSearchQueryChanged("")
                     },
+                    modifier = Modifier.testTag("clearButtonSearchToolBar")
                 ) {
                     Icon(
                         imageVector = NiaIcons.Close,
